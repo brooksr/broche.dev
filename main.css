@@ -16,6 +16,7 @@ body {
     color: #666;
     font-size: 16px;
     line-height: 1.4;
+    overflow-x: hidden;
 }
 ::selection {
     background: var(--primary-color);
@@ -46,17 +47,17 @@ a {
     color: hsla(121, 100%, 94%, 1);
 }
 .block:nth-child(even):before {
-    content: "";
-    background-color: var(--primary-color);
-    background: rgb(13,156,17);
-    background: linear-gradient(-89deg, hsl(122, 85%, 33%) 35%, hsl(121, 65%, 28%) 100%);
-    width: 150%;
     display: block;
     position: absolute;
-    z-index: -1;
+    content: "";
+    background-color: var(--primary-color);
+    background: linear-gradient(-89deg, hsl(122, 85%, 33%) 35%, hsl(121, 65%, 28%) 100%);
+    width: 1000%;
     top: 0;
     bottom: 0;
-    transform: rotate(1deg) translate(-25%);
+    left: -500%;
+    transform: rotate(1deg);
+    z-index: -1;
 }
 
 .logo {
@@ -123,6 +124,11 @@ a {
     fill: #fff;
     padding: 0.5em;
     width: 3em;
+}
+
+.footer img {
+    max-width: 200px;
+    float: right;
 }
 
 @media (min-width: 980px) {
