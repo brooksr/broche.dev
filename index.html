@@ -1,22 +1,119 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Brooks Roche Portfolio</title>
+  <title>Brooks Roche's Portfolio</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta property="og:title" content="">
+  <meta property="og:title" content="Brooks Roche's Portfolio">
   <meta property="og:type" content="">
-  <meta property="og:url" content="">
+  <meta property="og:url" content="https://broche.dev">
   <meta property="og:image" content="">
-
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#fff">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Raleway&display=swap" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
 </head>
 
 <body>
-  <p>Hello!</p>
+  <!-- 
+    Curious about the source code?
+    This is a simple static site hosted on Github Pages
+  -->
+
+  <header class="nav block">
+    <div class="logo">
+      Brooks Roche
+    </div>
+    <nav>
+      <a href="#websites">Websites &amp; Applications</a>
+      <a href="#advertisements">Advertisements</a>
+      <a href="#emails">Emails</a>
+      <a href="#emails">About Me</a>
+    </nav>
+  </header>
+
+  <div class="hero block">
+    <h1>Hi, I'm Brooks</h1>
+    <p>Web developer, designer, problem solver.</p>
+  </div>
+
+  <div id="websites" class="portfolio block">
+    <h2>Websites &amp; Applications</h2>
+    <ul class="portfolio-list">
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div id="advertisements" class="portfolio block">
+    <h2>Advertisements</h2>
+    <ul class="portfolio-list">
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div id="emails" class="portfolio block">
+    <h2>Emails</h2>
+    <ul class="portfolio-list">
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+      <li>
+        <img src="https://placehold.it/200" alt="www.example.com" />
+        <h3>Title</h3>
+        <p>Description of my contribution to this project.</p>
+      </li>
+    </ul>
+  </div>
+
+  <footer id="about-me" class="footer block">
+    <h2>About Me</h2>
+    <p>Born and raised in the SF Bay Area, I am now a web developer and designer living in Southern California.</p>
+    <a href="mailto:brooks@brooksroche.com" class="link">
+      <svg fill="#fff" width="2em" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 489.776 489.776" style="enable-background:new 0 0 489.776 489.776;" xml:space="preserve"> <g> <path d="M469.075,64.488h-448.2c-10.3,0-18.8,7.5-20.5,17.3c-0.6,2.4-0.3,322.7-0.3,322.7c0,11.4,9.4,20.8,20.8,20.8h447.1 c11.4,0,20.8-8.3,21.8-19.8v-320.2C489.875,73.788,480.475,64.488,469.075,64.488z M404.275,106.088l-159.8,114.4l-159.8-114.4 H404.275z M40.675,384.788v-259.9l192.4,137.2c7.8,6.3,17.2,4.4,22.9,0l192.4-137.8v260.5L40.675,384.788L40.675,384.788z"/> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg>
+      <span class="username">brooks@brooksroche.com</span>
+    </a>
+    <a href="https://github.com/brooksr" target="_blank" class="link">
+      <svg fill="#fff" width="2em" class="octicon octicon-mark-github v-align-middle" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+      <span class="username">brooksr</span>
+    </a>
+  </footer>
+
 </body>
 
 </html>
