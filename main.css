@@ -1,0 +1,138 @@
+html {
+    width: 100%;
+    box-sizing: border-box;
+    --primary-color: hsla(122, 85%, 33%, 1);
+    --font-display: 'Fredoka One', cursive;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    width: 100%;
+    max-width:980px;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    background-color: #efefef;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.4;
+}
+::selection {
+    background: var(--primary-color);
+    text-shadow: none;
+}
+  
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: normal;
+    margin: 0.5em 0;
+    text-decoration: underline;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: inherit;
+}
+
+.block {
+    padding: 4em;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.block:nth-child(even) {
+    color: hsla(121, 100%, 94%, 1);
+}
+.block:nth-child(even):before {
+    content: "";
+    background-color: var(--primary-color);
+    background: rgb(13,156,17);
+    background: linear-gradient(-89deg, hsl(122, 85%, 33%) 35%, hsl(121, 65%, 28%) 100%);
+    width: 150%;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    transform: rotate(1deg) translate(-25%);
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 2em;
+    color: var(--primary-color);
+}
+
+.nav {
+    text-align: right;
+    margin-bottom: 1em;
+    background: #efefef;
+    box-shadow: 0 0 0.5em #efefef;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1em;
+    z-index: 1;
+}
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    transition: transform 500ms ease;
+}
+.nav a:hover {
+    transform: scale(1.1);
+    color:#222;
+}
+
+.hero {
+    font-family: var(--font-display);
+    font-size: 2em;
+    padding: 1em;
+}
+
+.portfolio-list {
+    list-style: none;
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0;
+    width: 100%;
+}
+.portfolio-list li {
+    width:33%;
+    text-align: center;
+}
+.portfolio {
+    padding: 9em 0;
+}
+
+.link {
+    line-height: 3;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 1em;
+    font-weight: bold;
+}
+.link svg {
+    fill: #fff;
+    padding: 0.5em;
+    width: 3em;
+}
+
+@media (min-width: 980px) {
+    .block {
+        overflow: visible;
+    }
+    body {
+        padding-top: 10em;
+    }
+    .nav {
+        position: fixed;
+    }
+}
