@@ -60,22 +60,27 @@
   <script type="text/javascript">
     var portfolio = {
       websites: {
-        name: "Websites & Applications",
+        name: "Websites",
         items: [
           {
             src: "https://i.imgur.com/tsVmcBN.png",
             name: "Pitch Perfect",
-            desc: "2014",
+            desc: "I created a brand identity, logo, and website mockup for a startup project called Pitch Perfect in 2014.",
           },
           {
             src: "https://i.imgur.com/zGMuPvH.jpg",
-            name: "chasearabians.com",
-            desc: "2013",
+            name: "Chase Arabians",
+            desc: "I developed and designed the website for Chase Arabians while working at Knight Media Networks in 2013.",
           },
           {
-            src: "https://placehold.it/200",
-            name: "example.com",
-            desc: "desc",
+            src: "https://i.imgur.com/eOmP3KW.png",
+            name: "Web Editor",
+            desc: "I am currently working on creating a new campaign design and development tool with React at Upsellit.",
+          },
+          {
+            src: "https://i.imgur.com/us0pWgR.png",
+            name: "Upsellit Admin",
+            desc: "I rewrote the legacy admininstrative tools to increase productivity and automate tasks, using jQuery and Java.",
           }
         ]
       },
@@ -83,42 +88,47 @@
         name: "Advertisements",
         items: [
           {
-            src: "https://placehold.it/200",
-            name: "example.com",
-            desc: "desc",
+            src: "https://i.imgur.com/g2BvQhx.png",
+            name: "Autodesk",
+            desc: "I developed campaigns for Autodesk, including this cart abandonment modal/",
           },
           {
-            src: "https://placehold.it/200",
-            name: "example.com",
-            desc: "desc",
+            src: "https://i.imgur.com/JYYl17W.png",
+            name: "Samsung",
+            desc: "This is a lead capture modal for Samsung, that saves the user's cart and sends a follow up series of emails.",
           },
           {
-            src: "https://placehold.it/200",
-            name: "example.com",
-            desc: "desc",
-          }
+            src: "https://i.imgur.com/EmQ6izo.png",
+            name: "Sideshow Toys",
+            desc: "I've created various in-page elements of websites, including these recommendations for Sideshow Toys",
+          },
+          {
+            src: "https://i.imgur.com/lFa3fdM.png",
+            name: "McAfee",
+            desc: "I built McAfee's cart abandonment emails.",
+          },
         ]
       },
-      emails: {
-        name: "Emails",
-        items: [
-          {
-            src: "https://placehold.it/200",
-            name: "example.com",
-            desc: "desc",
-          },
-          {
-            src: "https://placehold.it/200",
-            name: "example.com",
-            desc: "desc",
-          },
-          {
-            src: "https://placehold.it/200",
-            name: "example.com",
-            desc: "desc",
-          }
-        ]
-      }
+      // emails: {
+      //   name: "Emails",
+      //   items: [
+      //     {
+      //       src: "https://i.imgur.com/lFa3fdM.png",
+      //       name: "McAfee",
+      //       desc: "",
+      //     },
+      //     {
+      //       src: "https://placehold.it/200",
+      //       name: "example.com",
+      //       desc: "desc",
+      //     },
+      //     {
+      //       src: "https://placehold.it/200",
+      //       name: "example.com",
+      //       desc: "desc",
+      //     }
+      //   ]
+      // }
     };
     var render = (selector, obj, template) => {
       document.querySelector(selector).innerHTML += Object.keys(obj).map(group => template(group)).join("");
@@ -132,9 +142,7 @@
         <ul class="portfolio-list">
           ${portfolio[group].items.map(i => `
           <li>
-            <a href="${i.src}" target="_blank" rel="noopener" />
-              <img src="${i.src}" alt="${i.name}" />
-            </a>
+            <a class="modal-link" href="${i.src}" target="_blank" rel="noopener" aria-hidden="true"></a>
             <h3>${i.name}</h3>
             <p>${i.desc}</p>
           </li>
@@ -142,6 +150,13 @@
         </ul>
       </article>
     `);
+    document.querySelectorAll(".modal-link").forEach(link => {
+      link.style.backgroundImage = `url(${link.href})`;
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        event.currentTarget.parentNode.classList.toggle("full-screen");
+      })
+    });
   </script>
 
 </body>
