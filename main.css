@@ -118,6 +118,7 @@ a {
     overflow: hidden;
     display: block;
     padding-top: 100%;
+    border-radius: 1em;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
